@@ -19,10 +19,10 @@ spec:
       imagePullSecrets:
         - name: gcr-image-puller-service-account
       volumes:
-      - name: gcp-pod-default-service-account
-        secret:
-          defaultMode: 420
-          secretName: gcp-pod-default-service-account
+        - name: gcp-pod-default-service-account
+          secret:
+            defaultMode: 420
+            secretName: gcp-pod-default-service-account
       containers:
-        - image: gcr.io/kouzoh-newcd-guinea-jp-lab/kouzoh-newcd-guinea-jp:main-20210903075416 # {"$imagepolicy": "flux-system:kouzoh-newcd-guinea-jp-lab-imagepolicy"}
+        - image: gcr.io/kouzoh-newcd-guinea-jp-lab/kouzoh-newcd-guinea-jp:main-20210903100354 # {"$imagepolicy": "flux-system:kouzoh-newcd-guinea-jp-lab-imagepolicy"}
           name: kouzoh-newcd-guinea-jp
