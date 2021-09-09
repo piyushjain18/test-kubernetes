@@ -24,5 +24,5 @@ spec:
             defaultMode: 420
             secretName: gcp-pod-default-service-account
       containers:
-        - image: gcr.io/kouzoh-newcd-guinea-jp-lab/kouzoh-newcd-guinea-jp:main-2021090310038 # {"$imagepolicy": "flux-system:kouzoh-newcd-guinea-jp-lab-imagepolicy"}
+        - image: gcr.io/kouzoh-newcd-guinea-jp-lab/kouzoh-newcd-guinea-jp:main-2021090310039 # {"$imagepolicy": "flux-system:kouzoh-newcd-guinea-jp-lab-imagepolicy"}
           name: kouzoh-newcd-guinea-jp
