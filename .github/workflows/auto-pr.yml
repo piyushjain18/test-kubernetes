@@ -1,7 +1,8 @@
 name:  Auto-PR for new CD
 on:
   push:
-    branches: ['*-image-update']
+    branches:
+      - '*-image-update'
 
 jobs:
   pull-request:
