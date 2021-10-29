@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: testdeployment
+  name: testdeployment
+  namespace: kouzoh-newcd-guinea-319-jp-lab
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: testdeployment
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: testdeployment
+    spec:
+      imagePullSecrets:
+        - name: gcr-image-puller-service-account
+      volumes:
+        - name: gcp-pod-default-service-account
+          secret:
+            defaultMode: 420
+            secretName: gcp-pod-default-service-account
+      containers:
+        - image: gcr.io/kouzoh-newcd-guinea-jp-lab/kouzoh-newcd-guinea-jp:main-2021090310033 # {"": "flux-system:kouzoh-newcd-guinea-319-jp-lab-kouzoh-newcd-guinea-jp-root-imagepolicy"}
+          name: kouzoh-newcd-guinea-jp
+
